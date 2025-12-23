@@ -12,7 +12,8 @@ title = content["title"]
 st.title(f"{title}")
 
 image_url = content["hdurl"]
-st.image(image_url)
+response2 = requests.get(image_url)
+st.image(response2.content)
 
 explanation = content["explanation"]
 st.write(explanation)
